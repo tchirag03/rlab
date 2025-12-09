@@ -1,15 +1,18 @@
 view_program <- function() {
   # Map menu numbers to file paths
+  # Map menu numbers to file paths
+  # Use system.file to find files inside the installed package
+  # "programs" matches the folder name inside "inst"
   programs <- list(
-    "1" = "programs/prog1.R",
-    "2" = "programs/prog2.R",
-    "3" = "programs/prog3.R",
-    "4" = "programs/prog4.R",
-    "5" = "programs/prog5.R",
-    "6" = "programs/prog6.R",
-    "7" = "programs/prog7.R",
-    "8" = "programs/prog8.R",
-    "9" = "programs/prog9.R"
+    "1" = system.file("programs", "prog1.R", package = "RLabPrograms"),
+    "2" = system.file("programs", "prog2.R", package = "RLabPrograms"),
+    "3" = system.file("programs", "prog3.R", package = "RLabPrograms"),
+    "4" = system.file("programs", "prog4.R", package = "RLabPrograms"),
+    "5" = system.file("programs", "prog5.R", package = "RLabPrograms"),
+    "6" = system.file("programs", "prog6.R", package = "RLabPrograms"),
+    "7" = system.file("programs", "prog7.R", package = "RLabPrograms"),
+    "8" = system.file("programs", "prog8.R", package = "RLabPrograms"),
+    "9" = system.file("programs", "prog9.R", package = "RLabPrograms")
   )
 
   while (TRUE) {
