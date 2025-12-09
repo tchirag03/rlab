@@ -1,4 +1,4 @@
-Package: RLabPrograms
+Package: rlab
 Title: R Lab Programs Viewer
 Version: 0.1.0
 Authors@R: person("User", "Name", email = "user@example.com", role = c("aut", "cre"))

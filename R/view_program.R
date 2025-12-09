@@ -16,21 +16,34 @@ view_program <- function() {
   )
 
   while (TRUE) {
-    cat("\n==============================\n")
-    cat("      R LAB PROGRAMS MENU     \n")
-    cat("==============================\n")
-    cat("Available Programs:\n")
+    cat("
+======================================
+   Program Index
+======================================
 
-    for (num in sort(as.numeric(names(programs)))) {
-      file <- programs[[as.character(num)]]
-      first_line <- tryCatch(readLines(file, n = 1, warn = FALSE), error = function(e) "")      
-      desc <- if (grepl("^#", trimws(first_line))) {
-        trimws(sub("^#", "", trimws(first_line)))
-      } else {
-        "No description"
-      }
-      cat(sprintf("%d. %s\n", num, desc))
-    }
+1. Arithmetic Operation, Looping Statements,
+   Conditional Statements
+
+2. Creating and Manipulating Data Structures
+
+3. Basic Statistical Operations on Open-Source Datasets
+
+4. Data Import, Cleaning, and Export with Advanced Data Wrangling
+
+5. Advanced Data Manipulation with dplyr and Complex Grouping
+
+6. Data Visualization with ggplot2 and Customizations
+
+7. Linear and Multiple Regression Analysis
+   with Interaction Terms
+
+8. K-Means Clustering and PCA for Dimensionality Reduction
+
+9. Time Series Analysis using ARIMA and Seasonal Decomposition
+
+======================================
+")
+
 
     cat("0. Exit\n")
     choice <- readline("\nEnter program number to view (or 0 to exit): ")
